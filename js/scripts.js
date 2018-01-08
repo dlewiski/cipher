@@ -77,5 +77,8 @@ var letter2 = function(str1, lastLetter) {
   return(lastLetter);
 };
 
-alert(letter2(sentence) + letter1(sentence));
-alert(letter1(sentence) + letter2(sentence));
+var reArrange = function(str1){
+alert(letter2(str1) + letter1(str1));
+alert(str1 + letter1(str1) + letter2(str1));
+};
+reArrange(sentence);
