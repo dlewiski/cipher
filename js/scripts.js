@@ -69,7 +69,7 @@ var letter1 = function(str1, firstLetter) {
   firstLetter = firstLetter.toUpperCase();
   return(firstLetter);
 };
-alert(letter1(sentence));
+//alert(letter1(sentence));
 
 var letter2 = function(str1, lastLetter) {
   var lastLetter = str1.slice(-1);
@@ -82,3 +82,23 @@ alert(letter2(str1) + letter1(str1));
 alert(str1 + letter1(str1) + letter2(str1));
 };
 reArrange(sentence);
+
+var strCount = function(str1, nOfLetters, count, newLetter){
+  nOfLetters = (str1.length);
+  //alert(nOfLetters);
+  count = parseInt(nOfLetters / 2);
+  //alert(count);
+  newLetter = str1.charAt(count);
+  alert(newLetter + str1 + letter2(str1) + letter1(str1));
+};
+strCount(sentence);
+
+var reverseStrCount = function(str1, nOfLetters, count, newLetter){
+  nOfLetters = (str1.length);
+  //alert(nOfLetters);
+  count = parseInt(nOfLetters / 2);
+  //alert(count);
+  newLetter = str1.charAt(count);
+  alert(letter1(str1) + letter2(str1) + str1 + newLetter);
+};
+reverseStrCount(sentence);
